@@ -13,6 +13,7 @@
         {% include 'partial/sidenav-users.html.twig' %}
         <div id="main" class="w3-bar w3-border w3-black">
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <span style="float: right">{{ app.user.firstname }} {{ app.user.lastname }}</span>
         </div>
         <div id="body" class="w3-container" style="border:1px solid red">
            {% block body %}{% endblock %}
