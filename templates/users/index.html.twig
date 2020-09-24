@@ -1,11 +1,11 @@
 {% extends 'users.html.twig' %}
 
-{% block title %}Mon profil{% endblock %}
+{% block title %}Profile de {{ app.user.firstname }} {{ app.user.lastname }} {% endblock %}
 
 {% block body %}
     <table class="w3-table w3-bordered">
         <tr>
-            <th>Nom:</th><td>{{ app.user.civility }}</td>
+            <th>Prénom:</th><td>{{ app.user.civility }}</td>
         </tr>
         <tr>
             <th>Nom:</th><td>{{ app.user.lastname }}</td>
@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <a href="#"><button class="w3-button w3-ripple w3-black">Modifier le profil</button></a>
+                <a href="{{ path('edit-profile-user') }}"><button class="w3-button w3-ripple w3-black">Modifier le profile</button></a>
                 <a href="#"><button class="w3-button w3-ripple w3-black">Modifier le mot de passe</button></a>
             </td>
         </tr>

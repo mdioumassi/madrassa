@@ -1,0 +1,7 @@
+{% extends 'users.html.twig' %}
+
+{% block title %}Profile de {{ app.user.lastname }} {% endblock %}
+
+{% block body %}
+    {{ form(form) }}
+{% endblock %}

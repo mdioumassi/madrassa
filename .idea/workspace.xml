@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a624e047-3336-44d5-ab23-f26dcab2af91" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Form/EditProfileType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/users/editprofile.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +144,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/partial" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,8 +159,8 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/partial" />
       <recent name="$PROJECT_DIR$/templates/users" />
+      <recent name="$PROJECT_DIR$/templates/partial" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -173,7 +174,7 @@
       <workItem from="1599851518120" duration="4078000" />
       <workItem from="1600036581468" duration="58000" />
       <workItem from="1600945887517" duration="6916000" />
-      <workItem from="1600956649573" duration="5016000" />
+      <workItem from="1600956649573" duration="8093000" />
     </task>
     <task id="LOCAL-00001" summary="first commiit">
       <created>1600958711519</created>
@@ -182,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600958711519</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commiit">
+      <created>1600961916475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600961916475</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,17 +205,21 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="311" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1299.741@67.27.1299.741" timestamp="1599855124670" />
-    <state x="1812" y="20" width="1017" height="1038" key="CommitChangelistDialog2" timestamp="1600958711247">
+    <state x="2059" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600962310349">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1812" y="20" width="1017" height="1038" key="CommitChangelistDialog2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600958711247" />
+    <state x="2059" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600962310349" />
+    <state x="1812" y="20" width="1017" height="1038" key="CommitChangelistDialog2" timestamp="1600961916346">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1812" y="20" width="1017" height="1038" key="CommitChangelistDialog2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600961916346" />
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1600036636032">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1600036636032" />
-    <state x="1921" y="271" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1600958714283">
+    <state x="1921" y="271" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1600961919025">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="271" width="800" height="536" key="Vcs.Push.Dialog.v2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600958714283" />
+    <state x="1921" y="271" width="800" height="536" key="Vcs.Push.Dialog.v2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1600961919025" />
   </component>
 </project>
