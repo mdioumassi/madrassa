@@ -11,7 +11,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/config/packages/reset_password.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/migrations/Version20200911201008.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/migrations/Version20200911203309.php" afterDir="false" />
@@ -36,6 +35,7 @@
       <change afterPath="$PROJECT_DIR$/src/Security/EmailVerifier.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Security/UsersAuthenticator.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/inscription/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partial/sidenav-users.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/partial/sidenav.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/registration/confirmation_email.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
@@ -44,7 +44,9 @@
       <change afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/reset_password/reset.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/users.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
@@ -191,7 +193,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/partial" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -200,6 +202,15 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/partial" />
+      <recent name="$PROJECT_DIR$/templates/users" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -212,6 +223,7 @@
       <workItem from="1599851518120" duration="4078000" />
       <workItem from="1600036581468" duration="58000" />
       <workItem from="1600945887517" duration="6916000" />
+      <workItem from="1600956649573" duration="1239000" />
     </task>
     <servers />
   </component>
