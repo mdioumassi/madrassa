@@ -40,7 +40,6 @@ class EditProfileType extends AbstractType
             ->add('address_complement', TextType::class, [
                 'required' => false
             ])
-            ->add('Valider', SubmitType::class)
         ;
     }
 
