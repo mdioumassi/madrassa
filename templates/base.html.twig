@@ -13,8 +13,9 @@
         {% include 'partial/sidenav.html.twig' %}
         <div id="main" class="w3-bar w3-border w3-black">
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <span style="font-size:20px;float: right;"><a href="{{ path('app_login') }}">Se Connecter</a></span>
         </div>
-        <div id="body" class="w3-container" style="border:1px solid red">
+        <div id="body" class="w3-container">
            {% block body %}{% endblock %}
          </div>
         {% block javascripts %}
