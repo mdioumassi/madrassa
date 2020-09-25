@@ -7,7 +7,7 @@
 /public/bundles/
 /src/.preload.php
 /var/
-/vendorOLD/
+/vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
