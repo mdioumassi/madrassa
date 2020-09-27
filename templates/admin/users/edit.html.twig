@@ -1,13 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Modication ulisateur{% endblock %}
 
 {% block body %}
+    <style>
+        #edit_users_roles_1,  #edit_users_roles_2 {
+            margin-left: 10px;
+        }
+    </style>
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-<fieldset class="w3-white w3-card-2 w3-margin"><legend class="w3-green w3-padding-small">Inscription</legend>
+<fieldset class="w3-white w3-card-2 w3-margin"><legend class="w3-green w3-padding-small">Motifier l'utilisateur</legend>
     {{ form_start(form,  {'attr': {'novalidate': 'novalidate'}}) }}
     <div class="w3-row-padding">
         <div class="w3-half">
@@ -61,6 +66,12 @@
             {{ form_widget(form.phone_mobile, {'attr': {'class': 'w3-input w3-border w3-round'}}) }}
             {{ form_errors(form.phone_mobile) }}
         </div>
+    </div>
+    <div class="w3-padding">
+        <fieldset><legend>{{ form_label(form.roles, 'Rôles') }}</legend>
+            {{ form_widget(form.roles) }}
+            {{ form_errors(form.roles) }}
+        </fieldset>
     </div>
     <p class="w3-padding">
         <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires.

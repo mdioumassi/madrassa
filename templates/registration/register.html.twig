@@ -70,6 +70,7 @@
     <div class="w3-padding">
         {{ form_label(registrationForm.agreeTerms, 'J\'accepte les conditions') }}
         {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'w3-check'}}) }}
+        {{ form_errors(registrationForm.agreeTerms) }}
     </div>
     <p class="w3-padding">
         <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires.
