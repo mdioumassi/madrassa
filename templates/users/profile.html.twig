@@ -33,11 +33,9 @@
         <tr>
             <th>Ville:</th><td>{{ app.user.city }}</td>
         </tr>
-        <tr>
-            <td colspan="2">
-                <a href="{{ path('users_edit_profile') }}"><button class="w3-button w3-ripple w3-black w3-round-large">Modifier le profile</button></a>
-                <a href="{{ path('users_passwd_edit') }}"><button class="w3-button w3-ripple w3-black w3-round-large">Modifier le mot de passe</button></a>
-            </td>
-        </tr>
     </table>
+    <div class="w3-bar w3-margin">
+        <a href="{{ path('users_edit_profile') }}"><button class="w3-button w3-ripple w3-black w3-round-large">Modifier le profile</button></a>
+        <a href="{{ path('users_passwd_edit') }}"><button class="w3-button w3-ripple w3-black w3-round-large">Modifier le mot de passe</button></a>
+    </div>
 {% endblock %}

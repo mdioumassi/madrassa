@@ -10,21 +10,17 @@
         <link rel="stylesheet" href= "{{ asset('css/sidenav.css') }}">
     </head>
     <body>
-        {% include 'partial/sidenav.html.twig' %}
+        {% include 'partial/sidenav-admin.html.twig' %}
         <div id="main" class="w3-bar w3-border w3-black">
           <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-            {% if is_granted('IS_AUTHENTICATED_REMEMBERED')%}
-                <div class="w3-dropdown-hover w3-right">
-                    <button class="w3-button w3-green">{{ app.user.firstname }} {{ app.user.lastname }}</button>
-                    <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
-                        <a href="{{ path('users_profile') }}" class="w3-bar-item w3-button">Mon profil</a>
-                        <a href="{{ path('app_logout') }}" class="w3-bar-item w3-button">Se déconnecter</a>
-                    </div>
+            <span style="float: right">
+              <div class="w3-dropdown-hover w3-right">
+                <button class="w3-button w3-green">{{ app.user.firstname }} {{ app.user.lastname }}</button>
+                <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+                  <a href="{{ path('app_logout') }}" class="w3-bar-item w3-button">Se déconnecter</a>
                 </div>
-                {% else %}
-                    <span style="float:right;"><a href="{{ path('app_login') }}">Se Connecter</a></span>
-            {% endif %}
-
+              </div>
+            </span>
         </div>
         <div id="body" class="w3-container">
            {% block body %}{% endblock %}

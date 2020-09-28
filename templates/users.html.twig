@@ -26,18 +26,8 @@
            {% block body %}{% endblock %}
          </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{{ asset('js/nav-menu.js') }}"></script>
         {% block javascripts %}
-            <script>
-                  function openNav() {
-                    document.getElementById("mySidenav").style.width = "250px";
-                    document.getElementById("body").style.marginLeft = "250px";
-                  }
-
-                  function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                    document.getElementById("body").style.marginLeft= "0";
-                  }
-            </script>
         {% endblock %}
     </body>
 </html>
