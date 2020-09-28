@@ -11,18 +11,23 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+/**
+ * @Route("/users", name="users_")
+ * Class UsersController
+ * @package App\Controller
+ */
 class UsersController extends AbstractController
 {
     /**
-     * @Route("/users", name="users-profil")
+     * @Route("/profile", name="profile")
      */
-    public function index()
+    public function profile()
     {
-        return $this->render('users/index.html.twig');
+        return $this->render('users/profile.html.twig');
     }
 
     /**
-     * @Route("/users/profil/edit", name="edit-profile-user")
+     * @Route("/profil/edit", name="edit_profile")
      * @param Request $request
      */
     public function editProfile(Request $request, EntityManagerInterface $manager)
@@ -34,7 +39,7 @@ class UsersController extends AbstractController
             $manager->persist($user);
             $manager->flush();
             $this->addFlash('message', 'Profil mis à jour');
-            return $this->redirectToRoute('users-profil');
+            return $this->redirectToRoute('users_profile');
         }
 
         return $this->render('users/editprofile.html.twig', [
@@ -44,7 +49,7 @@ class UsersController extends AbstractController
 
     /**
      *
-     * @Route("/users/password/edti", name="users_passwd_edit")
+     * @Route("/password/edit", name="passwd_edit")
      */
     public function editpas(Request $request, UserPasswordEncoderInterface $passwordEncoder, EntityManagerInterface $manager)
     {
@@ -56,7 +61,7 @@ class UsersController extends AbstractController
                 $user->setPassword($passwordEncoder->encodePassword($user, $request->request->get('pass')));
                 $manager->flush();
                 $this->addFlash('message', 'Mot de passe mis à jour avec succés');
-                return $this->redirectToRoute('users-profil');
+                return $this->redirectToRoute('users_profile');
             } else {
                 $this->addFlash('error', 'Les deux mots de passe  ne sont pas identiques');
             }

@@ -1,4 +1,4 @@
-{% extends 'list.html.twig' %}
+{% extends 'users.html.twig' %}
 
 {% block title %}Profile de {{ app.user.firstname }} {{ app.user.lastname }} {% endblock %}
 
@@ -35,8 +35,8 @@
         </tr>
         <tr>
             <td colspan="2">
-                <a href="{{ path('edit-profile-user') }}"><button class="w3-button w3-ripple w3-black">Modifier le profile</button></a>
-                <a href="{{ path('users_passwd_edit') }}"><button class="w3-button w3-ripple w3-black">Modifier le mot de passe</button></a>
+                <a href="{{ path('users_edit_profile') }}"><button class="w3-button w3-ripple w3-black w3-round-large">Modifier le profile</button></a>
+                <a href="{{ path('users_passwd_edit') }}"><button class="w3-button w3-ripple w3-black w3-round-large">Modifier le mot de passe</button></a>
             </td>
         </tr>
     </table>

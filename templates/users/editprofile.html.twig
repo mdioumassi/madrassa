@@ -1,4 +1,4 @@
-{% extends 'list.html.twig' %}
+{% extends 'users.html.twig' %}
 
 {% block title %}Profile de {{ app.user.lastname }} {% endblock %}
 
@@ -54,7 +54,10 @@
         <p class="w3-padding">
             <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires.
         </p>
-        <button type="submit" class="w3-btn w3-blue">Valider</button>
+        <div class="w3-bar">
+            <a href="{{ path('users_profile') }}"><button class="w3-button w3-red w3-round-large">Retour</button></a>
+            <button type="submit" class="w3-btn w3-blue w3-round-large">Valider</button>
+        </div>
         {{ form_end(form) }}
     </fieldset>
 {% endblock %}
