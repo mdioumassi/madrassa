@@ -55,9 +55,18 @@
             <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires.
         </p>
         <div class="w3-bar">
-            <a href="{{ path('users_profile') }}"><button class="w3-button w3-red w3-round-large">Annuler</button></a>
+            <button id="back" class="w3-button w3-red w3-round-large">Annuler</button>
             <button type="submit" class="w3-btn w3-blue w3-round-large">Valider</button>
         </div>
         {{ form_end(form) }}
     </fieldset>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(function(){
+            $("#back").click(function () {
+                window.location.href = "{{ path('users_profile') }}";
+            })
+        });
+    </script>
 {% endblock %}

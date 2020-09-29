@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
 {% block title %}Modication ulisateur{% endblock %}
 
@@ -13,7 +13,7 @@
     {% endfor %}
 
 <fieldset class="w3-white w3-card-2 w3-margin"><legend class="w3-green w3-padding-small">Motifier l'utilisateur</legend>
-    {{ form_start(form,  {'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_start(form) }}
     <div class="w3-row-padding">
         <div class="w3-half">
             {{ form_label(form.civility, 'Civilité') }}

@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 {% endblock %}
 {% block body %}
+    <div class="w3-panel w3-blue">
+        <a href="{{ path('app_register') }}" ><p>Si vous n'êtes pas encore inscrit, vous pouvez créer votre profil ici</p></a>
+    </div>
     <h2>Please sign in</h2>
     <form method="post">
         {% if error %}
