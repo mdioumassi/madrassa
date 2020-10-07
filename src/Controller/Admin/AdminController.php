@@ -6,6 +6,7 @@ use App\Entity\Users;
 use App\Form\EditUsersType;
 use App\Repository\UsersRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -29,6 +30,7 @@ class AdminController extends AbstractController
     }
 
     /**
+     * @IsGranted("ROLE_ADMIN")
      * @Route("/users", name="liste_users")
      * @param UsersRepository $usersRepository
      * @return \Symfony\Component\HttpFoundation\Response

@@ -33,6 +33,7 @@
   }
   
   #main {
+     position: fixed;
     transition: margin-left .5s;
     padding: 16px;
   }
