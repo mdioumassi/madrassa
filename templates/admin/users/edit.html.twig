@@ -8,6 +8,7 @@
             margin-left: 10px;
         }
     </style>
+    <div class="separator" style="margin-top: 100px;"></div>
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}

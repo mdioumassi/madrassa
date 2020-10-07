@@ -6,7 +6,7 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-
+    <div class="separator" style="margin-top: 100px;"></div>
 <fieldset class="w3-white w3-card-2 w3-margin"><legend class="w3-green w3-padding-small">Inscription</legend>
     {{ form_start(registrationForm,  {'attr': {'novalidate': 'novalidate'}}) }}
     <div class="w3-row-padding">

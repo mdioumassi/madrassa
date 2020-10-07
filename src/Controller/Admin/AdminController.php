@@ -6,6 +6,7 @@ use App\Entity\Users;
 use App\Form\EditUsersType;
 use App\Repository\UsersRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,10 +36,16 @@ class AdminController extends AbstractController
      * @param UsersRepository $usersRepository
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function usersList(UsersRepository $usersRepository)
+    public function usersList(Request $request, UsersRepository $usersRepository, PaginatorInterface $paginator)
     {
+        $data = $usersRepository->findAll([], ['created_at' => 'desc']);
+        $users = $paginator->paginate(
+          $data,
+          $request->query->getInt('page', 1),
+          6
+        );
         return $this->render('admin/users/list.html.twig', [
-            'users' => $usersRepository->findAll()
+            'users' => $users
         ]);
     }
 

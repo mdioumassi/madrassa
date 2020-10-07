@@ -81,6 +81,16 @@ class Users implements UserInterface
      */
     private $address_complement;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $created_at;
+
+    public function __construct()
+    {
+        $this->created_at = new \DateTime("now");
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -263,6 +273,18 @@ class Users implements UserInterface
     public function setAddressComplement(?string $address_complement): self
     {
         $this->address_complement = $address_complement;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $created_at): self
+    {
+        $this->created_at = $created_at;
 
         return $this;
     }
