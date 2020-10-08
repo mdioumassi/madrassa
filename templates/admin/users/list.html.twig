@@ -4,6 +4,11 @@
 
 {% block body %}
     <div class="separator" style="margin-top: 100px;"></div>
+    {% for message in app.flashes('message') %}
+        <div class="w3-panel w3-green w3-padding">
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
     <div class="w3-container">
         <h2>Listes des utilisateurs</h2>
         <table class="w3-table-all">
@@ -40,9 +45,8 @@
                     <div class="w3-dropdown-hover">
                         <button class="w3-button w3-black w3-round-large">action</button>
                         <div class="w3-dropdown-content w3-bar-block w3-border">
-                            <a href="#" class="w3-bar-item w3-button">Voir</a>
-                            <a href="{{ path('admin_edit_users', {'id': user.id}) }}" class="w3-bar-item w3-button">Modifier</a>
-                            <a href="#" class="w3-bar-item w3-button">Supprimer</a>
+                            <a href="{{ path('admin_detail_users', {'id': user.id}) }}" class="w3-bar-item w3-button">Voir</a>
+                            <a href="{{ path('admin_edit_users', {'id': user.id}) }}" class="w3-bar-item w3-button" >Modifier</a>
                         </div>
                     </div>
                 </td>
@@ -53,5 +57,4 @@
     <div class="w3-container w3-margin-top">
         {{ knp_pagination_render(users) }}
     </div>
-
 {% endblock %}

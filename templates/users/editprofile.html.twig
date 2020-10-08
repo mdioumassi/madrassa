@@ -5,7 +5,7 @@
 {% block body %}
     <div class="separator" style="margin-top: 100px;"></div>
     <fieldset class="w3-white w3-card-2 w3-margin"><legend class="w3-green w3-padding-small"><strong>Modifier mon profil</strong></legend>
-        {{ form_start(form,  {'attr': {'novalidate': 'novalidate'}}) }}
+        {{ form_start(form,  {'attr': {'novalidate': 'novalidate', 'id' : 'edit-profile'}}) }}
         <div class="w3-row-padding">
             <div class="w3-third">
                 {{ form_label(form.civility, 'Civilité') }}
@@ -55,19 +55,23 @@
         <p class="w3-padding">
             <span style="color: #ff0000; font-weight: bold">*</span> Champs obligatoires.
         </p>
+        {{ form_end(form) }}
         <div class="w3-bar">
             <button id="back" class="w3-button w3-red w3-round-large">Annuler</button>
-            <button type="submit" class="w3-btn w3-blue w3-round-large">Valider</button>
+            <button id="valider" class="w3-btn w3-blue w3-round-large">Valider</button>
         </div>
-        {{ form_end(form) }}
     </fieldset>
 {% endblock %}
 {% block javascripts %}
     <script>
         $(function(){
-            $("#back").click(function () {
+            $("#back").click(function (ev) {
+                ev.preventDefault();
                 window.location.href = "{{ path('users_profile') }}";
             })
+            $("#valider").click(function () {
+                $("#edit-profile").submit();
+            });
         });
     </script>
 {% endblock %}

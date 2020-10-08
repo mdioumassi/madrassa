@@ -10,6 +10,7 @@ use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -68,5 +69,36 @@ class AdminController extends AbstractController
         return $this->render('admin/users/edit.html.twig', [
            'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/users/{id}/detail", name="detail_users")
+     * @param Users $users
+     * @param UsersRepository $usersRepository
+     * @return Response
+     */
+    public function detailUser(Users $users, UsersRepository $usersRepository) : Response
+    {
+        return $this->render('admin/users/detail.html.twig', [
+            'user' => $usersRepository->find($users)
+        ]);
+    }
+
+    /**
+     * @Route("/users/{id}/delete", name="delete_user")
+     * @param Users $users
+     * @param UsersRepository $usersRepository
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
+    public function deleteUser(Users $users, UsersRepository $usersRepository, EntityManagerInterface $manager) : Response
+    {
+        $user = $usersRepository->find($users);
+        if ($user) {
+            $manager->remove($users);
+            $manager->flush();
+            $this->addFlash('message', 'L\' utilisateur a bien été supprimer!');
+            return $this->redirectToRoute('admin_liste_users');
+        }
     }
 }
