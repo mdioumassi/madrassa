@@ -54,6 +54,9 @@
             {% endfor %}
         </table>
     </div>
+    <div class="w3-panel" style="width:40%">
+        <a href="{{ path('app_register') }}"> <button class="w3-button w3-block w3-black">Ajouter un nouveau</button></a>
+    </div>
     <div class="w3-container w3-margin-top">
         {{ knp_pagination_render(users) }}
     </div>

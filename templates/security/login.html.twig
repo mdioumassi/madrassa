@@ -6,58 +6,38 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 {% endblock %}
 {% block body %}
-    <div class="w3-container">
-        <div id="id01" class="w3-modal">
-            <div class="w3-modal-content w3-card-4">
-                <header class="w3-container w3-teal">
-                <span onclick="document.getElementById('id01').style.display='none'"
-              class="w3-button w3-display-topright">&times;</span>
-                    <h2>Please sign in</h2>
-                </header>
-                <div class="w3-container">
-                    <div class="w3-panel w3-blue">
-                        <a href="{{ path('app_register') }}" ><p>Si vous n'êtes pas encore inscrit, vous pouvez créer votre profil ici</p></a>
-                    </div>
-                    <form method="post">
-                        {% if error %}
-                            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                        {% endif %}
-
-                        {% if app.user %}
-                            <div class="mb-3">
-                                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-                            </div>
-                        {% endif %}
-                        <div class="container">
-                            <label for="uname"><b>Email</b></label>
-                            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" name="password" id="inputPassword" class="form-control" required>
-                            <input type="hidden" name="_csrf_token"   value="{{ csrf_token('authenticate') }}">
-
-                            <button type="submit">Login</button>
-                            <label>
-                                <input type="checkbox" checked="checked" name="_remember_me"> Remember me
-                            </label>
-                        </div>
-
-                        <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" class="cancelbtn">Cancel</button>
-                            <span class="psw"><a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a></span>
-                        </div>
-                    </form>
-                </div>
-                <footer class="w3-container w3-teal">
-                    <p></p>
-                </footer>
-            </div>
-        </div>
+    <div class="separator" style="margin-top: 100px;"></div>
+    <div class="w3-panel w3-blue">
+        <a href="{{ path('app_register') }}" ><p>Si vous n'êtes pas encore inscrit, vous pouvez créer votre profil ici</p></a>
     </div>
-{% endblock %}
+    <h2>Please sign in</h2>
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
 
-{% block javascripts %}
-    <script>
-        document.getElementById('id01').style.display='block';
-    </script>
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+        <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" name="password" id="inputPassword" class="form-control" required>
+            <input type="hidden" name="_csrf_token"   value="{{ csrf_token('authenticate') }}">
+
+            <button type="submit">Connecter</button>
+            <label>
+                <input type="checkbox" checked="checked" name="_remember_me"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a></span>
+        </div>
+    </form>
 {% endblock %}

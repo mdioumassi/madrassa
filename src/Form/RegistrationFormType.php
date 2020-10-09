@@ -85,7 +85,7 @@ class RegistrationFormType extends AbstractType
                         'min' => 5,
                         'minMessage' => 'Le code postal doit comporter {{ limit }} chiffre',
                         // max length allowed by Symfony for security reasons
-                        'max' => 4096,
+                        'max' => 5,
                     ]),
                 ]
             ])
@@ -105,16 +105,16 @@ class RegistrationFormType extends AbstractType
                         'min' => 8,
                         'minMessage' => 'Le numéro de téléphone doit comporter {{ limit }} chiffre',
                         // max length allowed by Symfony for security reasons
-                        'max' => 4096,
+                        'max' => 8,
                     ]),
                 ]
             ])
             ->add('civility', ChoiceType::class, [
                 'placeholder' => 'Choisir',
                 'choices'  => [
-                    'Mr' => 'monsieur',
-                    'Mme' => 'madame',
-                    'Mll' => 'mademoiselle',
+                    'Mr' => 'MR',
+                    'Mme' => 'MME',
+                    'Mlle' => 'MLLE',
                 ],
                 'required' => true,
                 'constraints' => [
