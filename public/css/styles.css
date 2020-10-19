@@ -34,3 +34,9 @@ Modal
     outline: 0;
     top: -50px;
 }
+.menu-label{
+    position: absolute;
+    top: 18px;
+    left: 57px;
+    font-size: 25px;
+}
