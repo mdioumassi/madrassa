@@ -1,15 +1,23 @@
-body{
+body {
     font-size: 14px;
 }
+
 label.required:before {
     content: "*";
     color: red;
 }
+
+
 /**
 
  */
+
 .separator {
-    margin-top:100px;
+    margin-top: 100px;
+}
+
+form ul li {
+    color: red;
 }
 
 .w3-dropdown-content {
@@ -23,9 +31,12 @@ label.required:before {
     position: fixed;
     margin-right: 18px;
 }
+
+
 /**
 Modal
  */
+
 .w3-modal-content {
     margin: auto;
     background-color: #fff;
@@ -34,7 +45,8 @@ Modal
     outline: 0;
     top: -50px;
 }
-.menu-label{
+
+.menu-label {
     position: absolute;
     top: 18px;
     left: 57px;
