@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a624e047-3336-44d5-ab23-f26dcab2af91" name="Default Changelist" comment="pagination">
-      <change afterPath="$PROJECT_DIR$/public/css/menu-burger.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partial/menu-burger.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/nav-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/nav-menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="a624e047-3336-44d5-ab23-f26dcab2af91" name="Default Changelist" comment="pagination" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,6 +193,7 @@
       <workItem from="1602110242622" duration="3225000" />
       <workItem from="1602186524319" duration="10480000" />
       <workItem from="1603110674448" duration="7202000" />
+      <workItem from="1603355531891" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="first commiit">
       <created>1600958711519</created>
