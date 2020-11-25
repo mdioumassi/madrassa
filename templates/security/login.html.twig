@@ -4,29 +4,33 @@
 {% endblock %}
 {% block stylesheets %}
 	{{ parent() }}
-	<link rel="stylesheet" href="{{ asset('/css/login.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/login.css') }}">
 {% endblock %}
 {% block body %}
-	<div class="separator" style="margin-top: 100px;"></div>
-	<div class="w3-panel w3-blue">
-		<a href="{{ path('app_register') }}">
-			<p>Si vous n'êtes pas encore inscrit, vous pouvez créer votre profil ici</p>
-		</a>
-	</div>
-	<h2>Please sign in</h2>
-	<form method="post">
-		{% if error %}
-			<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-		{% endif %}
 
-		{% if app.user %}
-			<div class="mb-3">
-				You are logged in as
-				{{ app.user.username }},
-				<a href="{{ path('app_logout') }}">Logout</a>
-			</div>
-		{% endif %}
-		<div class="container">
+	<div class="separator" style="margin-top: 100px;"></div>
+	<div class="container1">
+		<div class="w3-panel w3-black w3-round">
+			<a href="{{ path('app_register') }}">
+				<h5 class="w3-center">Si vous n'êtes pas encore inscrit, vous pouvez créer votre profil ici</h5>
+			</a>
+		</div>
+
+		<h2>Please sign in</h2>
+		<form method="post">
+			{% if error %}
+				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+			{% endif %}
+
+			{% if app.user %}
+				<div class="mb-3">
+					You are logged in as
+					{{ app.user.username }},
+					<a href="{{ path('app_logout') }}">Logout</a>
+				</div>
+			{% endif %}
+
+
 			<label for="uname">
 				<b>Email</b>
 			</label>
@@ -43,13 +47,14 @@
 				<input type="checkbox" checked="checked" name="_remember_me">
 				Remember me
 			</label>
-		</div>
 
-		<div class="container" style="background-color:#f1f1f1">
-			<button type="button" class="cancelbtn">Cancel</button>
-			<span class="psw">
-				<a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a>
-			</span>
-		</div>
-	</form>
+
+			<div style="background-color:#f1f1f1; padding: 0 10px 0 10px">
+				<button type="button" class="cancelbtn">Cancel</button>
+				<span class="psw">
+					<a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a>
+				</span>
+			</div>
+		</form>
+	</div>
 {% endblock %}

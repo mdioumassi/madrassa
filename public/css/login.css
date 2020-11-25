@@ -1,6 +1,10 @@
-form {border: 3px solid #f1f1f1;}
+form {
+    border: 3px solid #f1f1f1;
+    padding: 16px;
+}
 
-input[type=email], input[type=password] {
+input[type=email],
+input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -39,8 +43,12 @@ img.avatar {
     border-radius: 50%;
 }
 
-.container {
+.container1 {
     padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block !important;
 }
 
 span.psw {
@@ -48,7 +56,9 @@ span.psw {
     padding-top: 16px;
 }
 
+
 /* Change styles for span and cancel button on extra small screens */
+
 @media screen and (max-width: 300px) {
     span.psw {
         display: block;
