@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a624e047-3336-44d5-ab23-f26dcab2af91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +197,7 @@
       <workItem from="1603110674448" duration="7202000" />
       <workItem from="1603355531891" duration="629000" />
       <workItem from="1609786359133" duration="4009000" />
-      <workItem from="1609792779754" duration="7681000" />
+      <workItem from="1609792779754" duration="8041000" />
     </task>
     <task id="LOCAL-00001" summary="first commiit">
       <created>1600958711519</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609799859710</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="pagination">
+      <created>1609800617003</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609800617003</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
