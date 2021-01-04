@@ -12,11 +12,11 @@
     </head>
     <body>
         {% include 'partial/sidenav-users.html.twig' %}
-        <div id="main" class="w3-bar w3-border w3-black">
+        <div id="main" class="w3-bar w3-border w3-indigo">
             {% include 'partial/menu-burger.html.twig' %}
             <span style="float: right">
               <div class="w3-dropdown-hover w3-right">
-                <button class="w3-button w3-green">{{ app.user.firstname }} {{ app.user.lastname }}</button>
+                <button class="w3-button w3-green" style="margin-top: -60px; margin-right: 15px;">{{ app.user.firstname }} {{ app.user.lastname }}</button>
                 <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
                   <a href="{{ path('app_logout') }}" class="w3-bar-item w3-button">Se déconnecter</a>
                 </div>

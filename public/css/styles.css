@@ -7,11 +7,6 @@ label.required:before {
     color: red;
 }
 
-
-/**
-
- */
-
 .separator {
     margin-top: 100px;
 }
@@ -51,4 +46,9 @@ Modal
     top: 18px;
     left: 57px;
     font-size: 25px;
+}
+
+.profile-info{
+    margin-right: 15px;
+    margin-top: -60px;
 }
